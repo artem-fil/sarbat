@@ -1,0 +1,17 @@
+@mixin h-align-center
+  margin: 0 auto
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+@mixin btn
+  cursor: pointer
+  display: block
+  border: none
+  background: none
+  outline: none
+  box-sizing: border-box
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
