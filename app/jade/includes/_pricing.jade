@@ -1,0 +1,14 @@
+section.pricing
+  .page-wrapper
+    .section-heading
+      h1.section-heading__header plans &amp; pricing
+    .grid
+      .row
+        .col-3
+          +plan('standart', '42', '10', '10', '5', '5', '5', '24/7', '-', '-')
+        .col-3
+          +plan('premium', '63', '10', '10', '5', '5', '5', '24/7', '-', '-')
+        .col-3
+          +plan('business', '74', '10', '10', '5', '5', '5', '24/7', 'business special', 'unlimited')
+        .col-3
+          +plan('ultimate', '96', '10', '10', '5', '5', '5', '24/7', 'ultimate special', 'unlimited')

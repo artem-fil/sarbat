@@ -2,3 +2,54 @@ mixin service(modifyer, title, text)
   div(class="service service--"+modifyer)
     h2.service__heading= title
     p.service__text= text
+    
+mixin step(i, title, text)
+  .step
+    h2.step__num 0#{i}
+      case i
+        when 1: span.step__caption One
+        when 2: span.step__caption Two
+        when 3: span.step__caption Three
+        when 4: span.step__caption Four
+        when 5: span.step__caption Five
+    h3.step__heading= title
+    p.step__text= text
+
+mixin skill(name, value)
+  div(class="pie-wrapper progress-#{value}")
+    div.pie
+      div(class="left-side half-circle")
+      div(class="right-side half-circle")
+  h2 #{name}
+  h3 #{value}
+    small %
+      
+mixin plan(name, price, space, resps, users, ftp, email, support, other, other2)
+  .plan
+    h2.plan__name #{name}
+    h3.plan__price
+      small $
+      | #{price}
+    p.plan__details
+      strong #{space}GB 
+      | of storage
+      br
+      strong #{resps} 
+      | respirators
+      br
+      strong #{users} 
+      | users
+      br
+      strong #{ftp} FTP 
+      | accounts
+      br
+      strong #{email} 
+      | email accounts
+      br
+      strong #{support} 
+      | support
+      br
+      | #{other}
+      br
+      | #{other2}
+    a.link-order order now

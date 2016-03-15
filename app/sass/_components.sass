@@ -91,3 +91,67 @@
     background: url(../img/design/i-service-wallet.png) no-repeat left top
   &--seo:before
     background: url(../img/design/i-service-cup.png) no-repeat left top
+/* --- process step --- */
+.step
+  &__num
+    text-transform: capitalize
+    font: 7.2em/.65em 'Montserrat bold', sans-serif
+    margin-bottom: .69em
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      width: 55%
+      height: 2px
+      background: linear-gradient(to right, $yellow 0%, $orange 100%)
+      left: 0
+      top: 1em
+  &__caption
+    vertical-align: top
+    margin-left: .25em
+    color: $decorate-text-color
+    font: .36em/.85em 'Notosans italic', sans-serif
+  &__text
+    color: $decorate-text-color
+    font: 1.4em/1.85em 'Notosans', sans-serif
+    padding-right: 20px
+  &__heading
+    margin-bottom: .8em
+    display: inline-block
+    text-transform: capitalize
+    font: 2.6em 'Montserrat bold', sans-serif
+
+/* --- plan ---*/
+.plan
+  border: 2px solid $decorate-text-color
+  padding: 3em
+  margin-right: 3em
+  strong
+    color: $base-text-color
+    font-weight: bold
+    font-style: italic
+  &__name
+    font: 2.6em 'Montserrat bold', sans-serif
+    text-transform: capitalize
+    margin-bottom: 1em
+  &__price
+    font: 7.2em/.75em 'Montserrat bold', sans-serif
+    text-align: right
+    margin-bottom: .5em
+    small
+      margin-right: .05em
+      vertical-align: top
+      color: $decorate-text-color
+      font: .4em/1.2em 'Notosans italic', sans-serif
+  &__details
+    padding: 2em 0
+    color: $decorate-text-color
+    font: 1.4em 'Notosans', sans-serif
+    text-transform: capitalize
+    line-height: 3em
+    border: 3px solid transparent
+    border-image: linear-gradient(to right, $yellow 0%, $orange 100%)
+    border-image-slice: 1
+    border-left: 0
+    border-right: 0
+    margin-bottom: 1.5em

@@ -18,7 +18,7 @@
   font-family: "Montserrat bold";
   src: url(../fonts/montserrat-bold.otf); }
 
-html, body, p, button, h1, h2, h3, h4, h5, h6 {
+html, body, p, button, h1, h2, h3, h4, h5, h6, div {
   margin: 0;
   padding: 0; }
 
@@ -38,6 +38,10 @@ body {
   box-sizing: border-box;
   width: 100%;
   max-width: 1170px; }
+
+.grid img {
+  max-zwidth: 100%;
+  display: block; }
 
 .row:after {
   content: "";
@@ -107,6 +111,12 @@ body {
     content: "";
     display: table;
     clear: both; }
+
+.clients {
+  background: linear-gradient(to right, #f3c500 0%, #ff5601 100%); }
+
+.skills {
+  background-color: #000; }
 
 /* --- logo --- */
 .page-header__logo {
@@ -205,6 +215,84 @@ body {
     background: url(../img/design/i-service-wallet.png) no-repeat left top; }
   .service--seo:before {
     background: url(../img/design/i-service-cup.png) no-repeat left top; }
+
+/* --- process step --- */
+.step__num {
+  text-transform: capitalize;
+  font: 7.2em/.65em 'Montserrat bold', sans-serif;
+  margin-bottom: .69em;
+  position: relative; }
+  .step__num:after {
+    position: absolute;
+    content: "";
+    width: 55%;
+    height: 2px;
+    background: linear-gradient(to right, #f3c500 0%, #ff5601 100%);
+    left: 0;
+    top: 1em; }
+
+.step__caption {
+  vertical-align: top;
+  margin-left: .25em;
+  color: #757575;
+  font: .36em/.85em 'Notosans italic', sans-serif; }
+
+.step__text {
+  color: #757575;
+  font: 1.4em/1.85em 'Notosans', sans-serif;
+  padding-right: 20px; }
+
+.step__heading {
+  margin-bottom: .8em;
+  display: inline-block;
+  text-transform: capitalize;
+  font: 2.6em 'Montserrat bold', sans-serif; }
+
+/* --- plan ---*/
+.plan {
+  border: 2px solid #757575;
+  padding: 3em;
+  margin-right: 3em; }
+  .plan strong {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic; }
+  .plan__name {
+    font: 2.6em 'Montserrat bold', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1em; }
+  .plan__price {
+    font: 7.2em/.75em 'Montserrat bold', sans-serif;
+    text-align: right;
+    margin-bottom: .5em; }
+    .plan__price small {
+      margin-right: .05em;
+      vertical-align: top;
+      color: #757575;
+      font: .4em/1.2em 'Notosans italic', sans-serif; }
+  .plan__details {
+    padding: 2em 0;
+    color: #757575;
+    font: 1.4em 'Notosans', sans-serif;
+    text-transform: capitalize;
+    line-height: 3em;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #f3c500 0%, #ff5601 100%);
+    border-image-slice: 1;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 1.5em; }
+
+.link-order {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font: 1.4em/.85em 'Montserrat bold', sans-serif;
+  letter-spacing: .05em;
+  cursor: pointer; }
+  .link-order:hover {
+    color: #757575; }
 
 .btn__header-menu {
   cursor: pointer;
