@@ -14,16 +14,7 @@ mixin step(i, title, text)
         when 5: span.step__caption Five
     h3.step__heading= title
     p.step__text= text
-
-mixin skill(name, value)
-  div(class="pie-wrapper progress-#{value}")
-    div.pie
-      div(class="left-side half-circle")
-      div(class="right-side half-circle")
-  h2 #{name}
-  h3 #{value}
-    small %
-      
+  
 mixin plan(name, price, space, resps, users, ftp, email, support, other, other2)
   .plan
     h2.plan__name #{name}
@@ -53,3 +44,31 @@ mixin plan(name, price, space, resps, users, ftp, email, support, other, other2)
       br
       | #{other2}
     a.link-order order now
+
+mixin post(day, month, num, heading)
+  .post
+    .post__thumb
+      img(src="img/content/blog-thumb-"+num+".jpg")
+    .post-details
+      .post__date
+        h2 #{day}
+        small #{month}
+      .post__heading
+        h3 #{heading}
+        a.link-blog(href="#") read now
+
+mixin comment(author, heading, text)
+  case author
+    when 'saoirse'
+      - var img = 1
+      - var name = 'Saoirse Ronan'
+    when 'emma'
+      - var img = 2
+      - var name = 'Emma Watson'
+  .feedback-comment
+    .feedback-comment__avatar.f-l
+      img(src="img/content/feedback-avatar-"+img+".jpg")
+    .feedback-comment-details
+      h2.feedback-comment__heading #{heading}
+      blockquote.feedback-comment__text "#{text}"
+      cite.feedback-comment__author - #{name}

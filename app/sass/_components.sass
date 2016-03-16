@@ -94,7 +94,6 @@
 /* --- process step --- */
 .step
   &__num
-    text-transform: capitalize
     font: 7.2em/.65em 'Montserrat bold', sans-serif
     margin-bottom: .69em
     position: relative
@@ -155,3 +154,122 @@
     border-left: 0
     border-right: 0
     margin-bottom: 1.5em
+/* --- feedback comments --- */
+.feedback-slider
+  position: relative
+.feedback-comment
+  +clearfix
+  &__avatar
+    +size(100px)
+    padding-bottom: 20px
+    border: 2px solid transparent
+    border-image: linear-gradient(to bottom right, $yellow 0%, $orange 100%)
+    border-image-slice: 1
+    border-top: 0
+    border-left: 0
+    border-right: 0
+    position:relative
+    &:after
+      position: relative
+      top: -125px
+      left: -2px
+      content: '\201D'
+      font: 7.2em 'Notosans italic', sans-serif
+
+    img
+      +size(100%)
+      display: block
+      border-radius: 50%
+  &__heading
+    font: 2.6em 'Montserrat bold', sans-serif
+    margin-bottom: .5em
+  &__text
+    padding: 0
+    margin: 0
+    padding-right: 5%
+    font: 1.4em/1.85em 'Notosans italic', sans-serif
+    margin-bottom: .5em
+  &__author
+    font: 1.4em/1.85em 'Notosans bold italic', sans-serif
+  &-details
+    overflow: hidden
+    padding-left: 5%
+    padding-top: 10px
+/* --- blog post --- */
+.post
+  font-size: 0
+  +clearfix
+  &__thumb
+    box-sizing: border-box
+    width: 45%
+    display: inline-block
+    vertical-align: bottom
+    img
+      width: 100%
+      display: block
+  &-details
+    box-sizing: border-box
+    padding-left: 5%
+    width: 55%
+    display: inline-block
+    vertical-align: bottom
+  &__date
+    overflow: hidden
+    h2
+      font: 4.5rem/.62em 'Montserrat bold', sans-serif
+      display: inline-block
+      border: 2px solid transparent
+      border-image: linear-gradient(to bottom right, $yellow 0%, $orange 100%)
+      border-image-slice: 1
+      border-top: 0
+      border-left: 0
+      border-right: 0
+      padding-right: 8px
+      padding-bottom: 20px
+      margin-bottom: 30px
+    small
+      font: 1.625rem/.8em 'Notosans italic', sans-serif
+      color: $decorate-text-color
+      vertical-align: top
+  &__heading
+    overflow: hidden
+    h3
+      font: 1.625rem 'Montserrat bold', sans-serif
+      padding-right: 10px
+      margin-bottom: 30px
+/* --- contact us elements --- */
+.contactus
+  &-form
+    margin-left: 5%
+    +clearfix
+    input::-webkit-input-placeholder
+      color: $decorate-text-color
+      text-transform: capitalize
+      font: 14px/1em 'Notosans italic', sans-serif
+    input:nth-last-child(2)
+      margin-bottom: 40px
+    &__input
+      color: $base-text-color
+      background-color: $base-bg-color
+      box-sizing: border-box
+      padding: 0
+      width: 100%
+      height: 50px
+      border: none
+      outline: none
+      margin-bottom: 10px
+      border-bottom: 2px solid $decorate-text-color
+  &__header
+    font: 2.6em 'Montserrat bold', sans-serif
+    margin-bottom: 20px
+  &__text
+    font: 1.4em/1.85em 'Notosans', sans-serif
+    padding-right: 20px
+    color: $decorate-text-color
+/* --- footer info --- */
+.page-footer-info
+  height: 100px
+  font: 1.4em/100px 'Notosans', sans-serif
+  text-align: center
+  em
+    font-family: 'Notosans italic', sans-serif

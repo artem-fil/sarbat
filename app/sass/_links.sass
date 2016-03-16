@@ -8,3 +8,43 @@
   cursor: pointer
   &:hover
     color: $decorate-text-color
+.link-social
+  display: inline-block
+  box-sizing: border-box
+  width: 25%
+  height: 80px
+  font-size: 0
+  border: 2px solid $decorate-text-color
+  border-right: none
+  background-repeat: no-repeat
+  background-position: center
+  &:hover
+    border: 2px solid transparent
+    border-image: linear-gradient(to right, $yellow 0%, $orange 100%)
+    border-image-slice: 1
+  &:first-child
+    border-left: none
+  &--fb
+    background-image: url(../img/design/i-social-facebook.png)
+    &:hover
+      background-image: url(../img/design/i-social-facebook.png), linear-gradient(to right, $yellow 0%, $orange 100%)
+  &--twitter
+    background-image: url(../img/design/i-social-twitter.png)
+    &:hover
+      background-image: url(../img/design/i-social-twitter.png), linear-gradient(to right, $yellow 0%, $orange 100%)
+  &--gplus
+    background-image: url(../img/design/i-social-gplus.png)
+    &:hover
+      background-image: url(../img/design/i-social-gplus.png), linear-gradient(to right, $yellow 0%, $orange 100%)
+  &--behance
+    background-image: url(../img/design/i-social-behance.png)
+    &:hover
+      background-image: url(../img/design/i-social-behance.png), linear-gradient(to right, $yellow 0%, $orange 100%)
+.link-blog
+  color: $base-text-color
+  text-decoration: none
+  font: .875rem/.2em 'Montserrat bold', sans-serif
+  letter-spacing: .05em
+  text-transform: uppercase
+  &:hover
+    color: $decorate-text-color
