@@ -91,6 +91,35 @@
     background: url(../img/design/i-service-wallet.png) no-repeat left top
   &--seo:before
     background: url(../img/design/i-service-cup.png) no-repeat left top
+/* --- work samples --- */
+.sample
+  box-sizing: border-box
+  border-right: 2px solid transparent
+  border-bottom: 2px solid transparent
+  a
+    box-sizing: border-box
+    max-width: 100%
+    width: 100%
+    display: block
+    &:hover img
+      -webkit-filter: none
+    &:hover span
+      display: block
+    span
+      box-sizing: border-box
+      padding: 20px
+      background: yellow
+      border: 1px solid red
+    img
+      min-width: 100%
+      max-width: 100%
+      display: block
+      -webkit-filter: grayscale(100%)
+
+        &:after
+          display: block
+  &--last
+    border-right: none
 /* --- process step --- */
 .step
   &__num

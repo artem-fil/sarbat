@@ -48,7 +48,7 @@ body {
   max-width: 1170px; }
 
 .grid img {
-  max-zwidth: 100%;
+  max-width: 100%;
   display: block; }
 
 .row:after {
@@ -96,6 +96,9 @@ body {
 
 .col-1 {
   width: 8.33333%; }
+
+.col-5-5 {
+  width: 20%; }
 
 .f-r {
   float: right; }
@@ -232,6 +235,32 @@ body {
     background: url(../img/design/i-service-wallet.png) no-repeat left top; }
   .service--seo:before {
     background: url(../img/design/i-service-cup.png) no-repeat left top; }
+
+/* --- work samples --- */
+.sample {
+  box-sizing: border-box;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent; }
+  .sample a {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    display: block; }
+    .sample a span {
+      box-sizing: border-box;
+      display: block;
+      border: 1px solid red; }
+    .sample a img {
+      min-width: 100%;
+      max-width: 100%;
+      display: block;
+      -webkit-filter: grayscale(100%); }
+      .sample a img:hover {
+        -webkit-filter: none; }
+        .sample a img:hover:after {
+          display: block; }
+  .sample--last {
+    border-right: none; }
 
 /* --- process step --- */
 .step__num {
