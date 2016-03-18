@@ -32,7 +32,6 @@ html, body, p, button, h1, h2, h3, h4, h5, h6, div, input {
 
 html, body {
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
   min-width: 640px; }
 
@@ -98,7 +97,12 @@ body {
   width: 8.33333%; }
 
 .col-5-5 {
-  width: 20%; }
+  box-sizing: border-box;
+  width: 20%;
+  border-right: 2px solid transparent; }
+
+.col-last {
+  border-right: none; }
 
 .f-r {
   float: right; }
@@ -111,6 +115,12 @@ body {
 
 .m-b-40 {
   margin-bottom: 40px; }
+
+.m-b-140 {
+  margin-bottom: 140px; }
+
+.centered {
+  margin: 0 auto; }
 
 .page-wrapper {
   max-width: 1170px;
@@ -239,28 +249,43 @@ body {
 /* --- work samples --- */
 .sample {
   box-sizing: border-box;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent; }
+  border-bottom: 2px solid transparent;
+  position: relative; }
+  .sample--last {
+    border-right: none; }
   .sample a {
-    box-sizing: border-box;
-    max-width: 100%;
-    width: 100%;
+    text-decoration: none;
     display: block; }
-    .sample a span {
-      box-sizing: border-box;
-      display: block;
-      border: 1px solid red; }
+    .sample a:hover img {
+      -webkit-filter: none; }
+    .sample a:hover .sample__caption {
+      display: block; }
     .sample a img {
-      min-width: 100%;
+      width: 100%;
       max-width: 100%;
       display: block;
       -webkit-filter: grayscale(100%); }
-      .sample a img:hover {
-        -webkit-filter: none; }
-        .sample a img:hover:after {
-          display: block; }
-  .sample--last {
-    border-right: none; }
+    .sample a .sample__caption {
+      display: none;
+      position: absolute;
+      margin-top: -110px;
+      z-index: 1;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      background-image: linear-gradient(to right, #f3c500 0%, #ff5601 100%);
+      color: #fff;
+      text-align: center; }
+      .sample a .sample__caption span {
+        font: 2.6em/2em 'Montserrat bold', sans-serif; }
+      .sample a .sample__caption hr {
+        width: 170px;
+        height: 2px;
+        border: none;
+        background: #fff; }
+      .sample a .sample__caption small {
+        font: 1.4em/2.8em 'Montserrat bold', sans-serif;
+        text-transform: uppercase; }
 
 /* --- process step --- */
 .step__num {
@@ -272,7 +297,7 @@ body {
     content: "";
     width: 55%;
     height: 2px;
-    background: linear-gradient(to right, #f3c500 0%, #ff5601 100%);
+    background-image: linear-gradient(to right, #f3c500 0%, #ff5601 100%);
     left: 0;
     top: 1em; }
 
@@ -314,7 +339,7 @@ body {
       margin-right: .05em;
       vertical-align: top;
       color: #757575;
-      font: .4em/1.2em 'Notosans italic', sans-serif; }
+      font: .4em/1em 'Notosans italic', sans-serif; }
   .plan__details {
     padding: 2em 0;
     color: #757575;
@@ -327,6 +352,36 @@ body {
     border-left: 0;
     border-right: 0;
     margin-bottom: 1.5em; }
+
+/* --- skills--- */
+.skill__bar {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  min-height: 150px;
+  position: relative; }
+  .skill__bar:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 65px;
+    left: 65px;
+    background: #fff; }
+
+.skill__details {
+  padding-right: 10%;
+  text-align: right; }
+  .skill__details span {
+    text-transform: capitalize;
+    font: 2.6em/3.1em 'Montserrat bold', sans-serif; }
+  .skill__details strong {
+    font: 7.2em/.61em 'Montserrat bold', sans-serif; }
+  .skill__details small {
+    vertical-align: top;
+    color: #757575;
+    font: 2.6em/.75em 'Notosans italic', sans-serif; }
 
 /* --- feedback comments --- */
 .feedback-slider {
@@ -402,7 +457,7 @@ body {
   .post__date {
     overflow: hidden; }
     .post__date h2 {
-      font: 4.5rem/.62em 'Montserrat bold', sans-serif;
+      font: 4.6rem/.74em 'Montserrat bold', sans-serif;
       display: inline-block;
       border: 2px solid transparent;
       border-image: linear-gradient(to bottom right, #f3c500 0%, #ff5601 100%);
@@ -587,3 +642,18 @@ body {
   right: 2%;
   position: absolute;
   background: url(../img/design/i-feedback-slider-right.png) no-repeat center center; }
+
+.btn__view-more {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 50%;
+  height: 50px;
+  background-image: linear-gradient(to bottom right, #f3c500 0%, #ff5601 100%);
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font: 14px/50px 'Montserrat bold', sans-serif; }

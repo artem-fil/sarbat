@@ -2,7 +2,16 @@ mixin service(modifyer, title, text)
   div(class="service service--"+modifyer)
     h2.service__heading= title
     p.service__text= text
-    
+
+mixin work(caption, file)
+  .sample
+    a(href="#")
+      img(src="img/content/sample-"+file+".jpg")
+      .sample__caption
+        span #{caption}
+        hr
+        small view more
+
 mixin step(i, title, text)
   .step
     h2.step__num 0#{i}
@@ -44,6 +53,14 @@ mixin plan(name, price, space, resps, users, ftp, email, support, other, other2)
       br
       | #{other2}
     a.link-order order now
+    
+mixin skill(name, percent)
+  .skill
+    div.skill__bar(id='skill-'+name)
+    p.skill__details
+      span.f-l #{name}
+      strong.counter #{percent}
+      small %
 
 mixin post(day, month, num, heading)
   .post

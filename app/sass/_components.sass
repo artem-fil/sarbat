@@ -94,32 +94,45 @@
 /* --- work samples --- */
 .sample
   box-sizing: border-box
-  border-right: 2px solid transparent
   border-bottom: 2px solid transparent
+  position: relative
+  &--last
+    border-right: none
   a
-    box-sizing: border-box
-    max-width: 100%
-    width: 100%
+    text-decoration: none
     display: block
-    &:hover img
-      -webkit-filter: none
-    &:hover span
-      display: block
-    span
-      box-sizing: border-box
-      padding: 20px
-      background: yellow
-      border: 1px solid red
+    &:hover
+      img
+        -webkit-filter: none
+      .sample__caption
+        display: block
     img
-      min-width: 100%
+      width: 100%
       max-width: 100%
       display: block
       -webkit-filter: grayscale(100%)
+    .sample__caption
+      display: none
+      position: absolute
+      margin-top: -110px
+      z-index: 1
+      width: 100%
+      box-sizing: border-box
+      padding: 10px
+      background-image: linear-gradient(to right, $yellow 0%, $orange 100%)
+      color: $base-text-color
+      text-align: center
+      span
+        font: 2.6em/2em 'Montserrat bold', sans-serif
+      hr
+        width: 170px
+        height: 2px
+        border: none
+        background: $base-text-color
+      small
+        font: 1.4em/2.8em 'Montserrat bold', sans-serif
+        text-transform: uppercase
 
-        &:after
-          display: block
-  &--last
-    border-right: none
 /* --- process step --- */
 .step
   &__num
@@ -131,7 +144,7 @@
       content: ""
       width: 55%
       height: 2px
-      background: linear-gradient(to right, $yellow 0%, $orange 100%)
+      background-image: linear-gradient(to right, $yellow 0%, $orange 100%)
       left: 0
       top: 1em
   &__caption
@@ -170,7 +183,7 @@
       margin-right: .05em
       vertical-align: top
       color: $decorate-text-color
-      font: .4em/1.2em 'Notosans italic', sans-serif
+      font: .4em/1em 'Notosans italic', sans-serif
   &__details
     padding: 2em 0
     color: $decorate-text-color
@@ -183,6 +196,35 @@
     border-left: 0
     border-right: 0
     margin-bottom: 1.5em
+/* --- skills--- */
+.skill
+  &__bar
+    +size(150px)
+    margin-bottom: 30px
+    min-height: 150px
+    position: relative
+    &:before
+      position: absolute
+      content: ""
+      +size(20px)
+      border-radius: 50%
+      top: 65px
+      left: 65px
+      background: $base-text-color
+  &__details
+    padding-right: 10%
+    text-align: right
+    span
+      text-transform: capitalize
+      font: 2.6em/3.1em 'Montserrat bold', sans-serif
+    strong
+      font: 7.2em/.61em 'Montserrat bold', sans-serif
+    small
+      vertical-align: top
+      color: $decorate-text-color
+      font: 2.6em/.75em 'Notosans italic', sans-serif
+
+
 /* --- feedback comments --- */
 .feedback-slider
   position: relative
@@ -245,7 +287,7 @@
   &__date
     overflow: hidden
     h2
-      font: 4.5rem/.62em 'Montserrat bold', sans-serif
+      font: 4.6rem/.74em 'Montserrat bold', sans-serif
       display: inline-block
       border: 2px solid transparent
       border-image: linear-gradient(to bottom right, $yellow 0%, $orange 100%)
