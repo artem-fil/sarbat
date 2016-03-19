@@ -4,14 +4,20 @@
   overflow: hidden
   padding: 100px 0
 .page-header
+  margin: 0 auto
+  max-width: $page-max-width
   min-height: 1080px
-  background: url(../img/content/slide-1.jpg) no-repeat center top
 .page-header-top
   margin-top: -60px
   +clearfix
+.portfolio
+  margin: 0 auto
+  max-width: $page-max-width
 .clients
-  background: linear-gradient(to right, $yellow 0%, $orange 100%)
+  +base-gradient
+  margin: 0 auto
+  max-width: $page-max-width
 .skills, .feedback
   background-color: $alt-bg-color
 .page-footer
-  background: linear-gradient(to right, $yellow 0%, $orange 100%)
+  +base-gradient

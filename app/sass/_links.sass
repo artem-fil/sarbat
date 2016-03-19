@@ -1,13 +1,11 @@
 .link-order
+  +text-link
   display: block
-  text-transform: uppercase
   color: $base-text-color
   text-align: center
-  font: 1.4em/.85em 'Montserrat bold', sans-serif
-  letter-spacing: .05em
-  cursor: pointer
   &:hover
     color: $decorate-text-color
+
 .link-social
   display: inline-block
   box-sizing: border-box
@@ -19,9 +17,7 @@
   background-repeat: no-repeat
   background-position: center
   &:hover
-    border: 2px solid transparent
-    border-image: linear-gradient(to right, $yellow 0%, $orange 100%)
-    border-image-slice: 1
+    +border-gradient
   &:first-child
     border-left: none
   &--fb
@@ -40,11 +36,9 @@
     background-image: url(../img/design/i-social-behance.png)
     &:hover
       background-image: url(../img/design/i-social-behance.png), linear-gradient(to right, $yellow 0%, $orange 100%)
+
 .link-blog
+  +text-link
   color: $base-text-color
-  text-decoration: none
-  font: .875rem/.2em 'Montserrat bold', sans-serif
-  letter-spacing: .05em
-  text-transform: uppercase
   &:hover
     color: $decorate-text-color

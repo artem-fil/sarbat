@@ -1,25 +1,24 @@
 .btn__header-menu
   +btn
   border: 2px solid $black
-  width: 50px
-  height: 50px
+  +size(50px)
   font-size: 0
   background: url(../img/design/i-btn-burger.png) no-repeat center center
+
 .btn__header-scroll
   +btn
   display: inline-block
-  width: 30px
-  height: 50px
+  +size(30px, 50px)
   font-size: 0
   background: url(../img/design/i-slider-mouse.png) no-repeat center center
+
 .btn__contact-send
   +btn
   +size(170px, 50px)
-  text-transform: uppercase
+  +text-base-btn
+  +base-gradient
   color: $base-text-color
-  text-align: center
-  font: 14px/50px 'Montserrat bold', sans-serif
-  background-image: linear-gradient(to bottom right, $yellow 0%, $orange 100%)
+
 .btn-feedback-slider__left
   +btn
   +size(15px, 26px)
@@ -27,6 +26,7 @@
   top: 41%
   left: 2%
   background: url(../img/design/i-feedback-slider-left.png) no-repeat center center
+
 .btn-feedback-slider__right
   +btn
   +size(15px, 26px)
@@ -34,11 +34,10 @@
   right: 2%
   position: absolute
   background: url(../img/design/i-feedback-slider-right.png) no-repeat center center
+
 .btn__view-more
   +btn
   +size(50%, 50px)
-  background-image: linear-gradient(to bottom right, $yellow 0%, $orange 100%)
-  text-transform: uppercase
+  +base-gradient
+  +text-base-btn
   color: $base-text-color
-  text-align: center
-  font: 14px/50px 'Montserrat bold', sans-serif
